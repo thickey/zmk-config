@@ -65,10 +65,10 @@
 // |     |-FUN-|  <  |  >  |  [  |  ]  | |  ~  |  &  |  |  |  !  |  -  |     |
 //                   | OPT |_SYM_| SPACE | | RET | ESC | CMD |
                         bindings = <
-   &trans &kp STAR &kp PLUS  &kp PRCNT &kp DLLR  &none        &kp CARET &kp AT   &kp DOLLAR &kp BSLH  &kp GRAVE &trans
-   &trans &kp STAR &kp LPAR  &kp RPAR  &kp COLON &none        &kp UNDER &sk LGUI &sk LALT   &sk LCTRL &sk SHIFT &kp QMARK
-   &trans &mo FUN  &kp GRAVE &kp AT    &kp AMPS  &none        &kp TILDE &kp AMPS &kp PIPE   &kp EXCL  &kp EQUAL &trans
-                            &trans    &trans    &trans        &trans    &trans &trans
+   &trans &kp STAR  &kp PLUS  &kp HASH &kp LBRC &kp RBRC        &kp CARET &kp AT   &kp DOLLAR &kp BSLH  &kp GRAVE &trans
+   &trans &kp COLON &kp MINUS &kp DQT  &kp LPAR &kp RPAR        &kp UNDER &sk LGUI &sk LALT   &sk LCTRL &sk SHIFT &kp QMARK
+   &trans &kp PRCNT &kp LT    &kp GT   &kp LBKT &kp RBKT        &kp TILDE &kp AMPS &kp PIPE   &kp EXCL  &kp EQUAL &trans
+                              &trans    &trans    &trans        &trans    &trans &trans
                         >;
                 };
                 number_layer {
