@@ -124,7 +124,7 @@
 //                          |        |      |         | |  | |  |
                         bindings = <
    &kp LG(GRAVE) &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT &kp C_PP       &kp LS(LC(TAB)) &kp END   &kp HOME  &kp LC(TAB)  &kp DEL        &trans
-   &kp C_VOL_UP  &sk SHIFT  &sk LCTRL    &sk LALT     &sk LGUI   &kp TAB        &kp LEFT        &kp DOWN  &kp UP    &kp RIGHT    &kp BSPC       &kp LG(EQUAL)
+   &kp C_VOL_UP  &sk LSHIFT &sk LCTRL    &sk LALT     &sk LGUI   &kp TAB        &kp LEFT        &kp DOWN  &kp UP    &kp RIGHT    &kp BSPC       &kp LG(EQUAL)
    &kp C_VOL_DN  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)  &kp LS(TAB)    &kp LG(LPAR)    &kp PG_DN &kp PG_UP &kp LG(RPAR) &kp LG(LS(N4)) &kp LG(MINUS)
                                          &trans       &trans      &trans         &trans &trans &trans
                         >;
