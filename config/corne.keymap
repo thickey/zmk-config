@@ -51,10 +51,14 @@
   //  &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)   AS(U)     AS(Y)    AS(SQT) &kp BSPC
   //  &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)   AS(E)     AS(I)    AS(O)   AS(SLASH)
   //  &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)   AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
+  //  &kp ESC   &kp Q &kp W &kp F     &kp P   &kp B      &kp J     &kp L   &kp U     &kp Y    &kp SQT &kp BSPC
+  //  &kp TAB   &kp A &kp R &kp S     &kp T   &kp G      &kp M     &kp N   &kp E     &kp I    &kp O   &kp SLASH
+  //  &sk LSHFT &kp Z &kp X &kp C     &kp D   &kp V      &kp K     &kp H   &kp COMMA &kp SEMI &kp DOT &sk LSHFT
+  //                        &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp F     &kp P   &kp B      &kp J     &kp L   &kp U     &kp Y    &kp SQT &kp BSPC
-   &kp TAB   &kp A &kp R &kp S     &kp T   &kp G      &kp M     &kp N   &kp E     &kp I    &kp O   &kp SLASH
-   &sk LSHFT &kp Z &kp X &kp C     &kp D   &kp V      &kp K     &kp H   &kp COMMA &kp SEMI &kp DOT &sk LSHFT
+   &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)   AS(U)     AS(Y)    AS(SQT) &kp BSPC
+   &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)   AS(E)     AS(I)    AS(O)   AS(SLASH)
+   &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)   AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
                          &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
                         >;
                 };
