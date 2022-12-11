@@ -15,8 +15,6 @@
 #define NUM 2
 #define FUN 3
 #define NAV 4
-// #define DANGER 5
-// #define LCK 6
 
 &caps_word {
    continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -42,21 +40,13 @@
 
                 colemak_layer {
 // ---------------------------------------------------------------------------
-// | ESC   |  Q  |  W  |  F  |  P  |  B  | |  J  |  L  |  U  |  Y  |  '  |BSPC |
-// | TAB   |  A  |  R  |  S  |  T  |  G  | |  M  |  N  |  E  |  I  |  O  |  /  |
-// | SHIFT |  Z  |  X  |  C  |  D  |  V  | |  K  |  H  |  ,  |  ;  |  .  |SHIFT|
-//                   | CTRL |BSPC -NAV-| RET -NUM- | | SPACE | TAB -SYM-| SHIFT |
-// √ wanted keys on base layer: shift, space, ctrl, enter, bksp?, tab?
-
-                        //  &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
-                        //  &sk LCTRL &mt NAV BSPC &mt NUM RET    &kp SPACE &mt SYM TAB &sk LSHFT
-  //  &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)   AS(U)     AS(Y)    AS(SQT) &kp BSPC
-  //  &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)   AS(E)     AS(I)    AS(O)   AS(SLASH)
-  //  &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)   AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
-  //  &kp ESC   &kp Q &kp W &kp F     &kp P   &kp B      &kp J     &kp L   &kp U     &kp Y    &kp SQT &kp BSPC
-  //  &kp TAB   &kp A &kp R &kp S     &kp T   &kp G      &kp M     &kp N   &kp E     &kp I    &kp O   &kp SLASH
-  //  &sk LSHFT &kp Z &kp X &kp C     &kp D   &kp V      &kp K     &kp H   &kp COMMA &kp SEMI &kp DOT &sk LSHFT
-  //                        &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
+// | ESC   |  Q  |  W  |  F  |  P       |  B      | |  J  |  L      |  U  |  Y  |  '  |BSPC |
+// | TAB   |  A  |  R  |  S  |  T       |  G      | |  M  |  N      |  E  |  I  |  O  |  /  |
+// | SHIFT |  Z  |  X  |  C  |  D       |  V      | |  K  |  H      |  ,  |  ;  |  .  |SHIFT|
+//                     | CTRL|BSPC -NAV-|RET -NUM-| |SPACE|TAB -SYM-|SHIFT|
+// unsure if &mt or &lt is correct behavior-wise
+//                         &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
+//                         &sk LCTRL &mt NAV BSPC &mt NUM RET    &kp SPACE &mt SYM TAB &sk LSHFT
                         bindings = <
    &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)   AS(U)     AS(Y)    AS(SQT) &kp BSPC
    &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)   AS(E)     AS(I)    AS(O)   AS(SLASH)
@@ -69,12 +59,12 @@
 // |     |  *  |  +  |  #  |  {  |  }  | |  ^  |  @  |  $  |  \  |  `  |     |
 // |     |  :  |  -  |  "  |  (  |  )  | |  _  | CMD | ALT | CTRL|SHIFT|  ?  |
 // |     |-FUN-|  <  |  >  |  [  |  ]  | |  ~  |  &  |  |  |  !  |  -  |     |
-//                   | OPT |_SYM_| SPACE | | RET | ESC | CMD |
+//                   | OPT |_SYM_|SPACE| | RET | ESC | CMD |
                         bindings = <
-   &trans &kp STAR  &kp PLUS  &kp HASH &kp LBRC &kp RBRC        &kp CARET &kp AT   &kp DOLLAR &kp BSLH  &kp GRAVE &trans
-   &trans &kp COLON &kp MINUS &kp DQT  &kp LPAR &kp RPAR        &kp UNDER &sk LGUI &sk LALT   &sk LCTRL &sk LSHIFT &kp QMARK
-   &trans &kp PRCNT &kp LT    &kp GT   &kp LBKT &kp RBKT        &kp TILDE &kp AMPS &kp PIPE   &kp EXCL  &kp EQUAL &trans
-                              &trans    &trans    &trans        &trans    &trans &trans
+   &trans &kp STAR  &kp PLUS  &kp HASH &kp LBRC &kp RBRC    &kp CARET &kp AT   &kp DOLLAR &kp BSLH  &kp GRAVE &trans
+   &trans &kp COLON &kp MINUS &kp DQT  &kp LPAR &kp RPAR    &kp UNDER &sk LGUI &sk LALT   &sk LCTRL &sk LSHIFT &kp QMARK
+   &trans &kp PRCNT &kp LT    &kp GT   &kp LBKT &kp RBKT    &kp TILDE &kp AMPS &kp PIPE   &kp EXCL  &kp EQUAL &trans
+                              &trans    &trans    &trans    &trans    &trans &trans
                         >;
                 };
                 number_layer {
@@ -82,57 +72,40 @@
 // |     |  B  |  1   |  UP  |  2  |  3  | |CLEAR|  7  |  8  |  9  |  +  |  *  |
 // |     |  D  | LEFT | DOWN |RIGHT|  4  | |  =  |  4  |  5  |  6  |  -  |  /  |
 // |     |  Q  |  W   |  E   |  R  |  F  | |  0  |  1  |  2  |  3  |  .  | RET |
-//                    |      | FN* | SPC | | RET |_NUM_| CMD |
-// * NB! FN/globe key using CAPSLOCK as substitute
-                        //  &trans   &sk CAPS  &trans     &trans    &trans &trans
+//                    |      |-FUN-| SPC | | RET |_NUM_| CMD |
+// * Note: could do FN/globe key using CAPSLOCK as substitute:
+//                         &trans   &sk CAPS  &trans     &trans    &trans &trans
                         bindings = <
-   &trans &kp B &kp N1   &kp UP   &kp N2    &kp N3     &kp CLEAR &kp N7 &kp N8 &kp N9 &kp PLUS  &kp STAR
-   &trans &kp D &kp LEFT &kp DOWN &kp RIGHT &kp N4     &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS &kp SLASH
-   &trans &kp Q &kp W    &kp E    &kp R     &kp F      &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &kp RET
-                         &trans   &mo FUN  &trans     &trans    &trans &trans
+   &trans &kp B &kp N1   &kp UP   &kp N2    &kp N3    &kp CLEAR &kp N7 &kp N8 &kp N9 &kp PLUS  &kp STAR
+   &trans &kp D &kp LEFT &kp DOWN &kp RIGHT &kp N4    &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS &kp SLASH
+   &trans &kp Q &kp W    &kp E    &kp R     &kp F     &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &kp RET
+                         &trans   &mo FUN   &trans    &trans    &trans &trans
                         >;
                 };
-//                 fun_layer {
-// // ---------------------------------------------------------------------------
-// // |     |     | F 6 | F 5 | F 4 | F10 | | BT0 | BT1 | USB | BLE |     |     |
-// // |     |CAPSL| F 3 | F 2 | F 1 | F11 | |VMUTE|VOLDN|VOLUP|BRIDN|BRIUP|     |
-// // |     |_FUN_| F 9 | F 8 | F 7 | F12 | | <!> | <!> |SLEEP|-!!!-|<LCK>|
-// //                   | OPT |_SYM_| SPC | | RET |<LCK>| CMD |
-//                         bindings = <
-//    &none &bt BT_CLR &kp F6 &kp F5 &kp F4 &kp F10  &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_USB &out OUT_BLE &none &none
-//    &none &kp CAPS &kp F3   &kp F2 &kp F1 &kp F11      &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP  &kp C_BRI_DN &kp C_BRI_UP &none
-//    &none &trans &kp F9 &kp F8 &kp F7  &kp F12      &none  &none &none &mo DANGER &to LCK   &none
-//                          &trans &trans &trans &trans &to LCK &trans
-//                         >;
-//                 };
                 fun_layer {
 // ---------------------------------------------------------------------------
 // |     |     | F 6 | F 5 | F 4 | F10 | | BT0 | BT1 | USB | BLE |     |     |
 // |     |CAPSL| F 3 | F 2 | F 1 | F11 | |VMUTE|VOLDN|VOLUP|BRIDN|BRIUP|     |
 // |     |_FUN_| F 9 | F 8 | F 7 | F12 | | <!> | <!> |SLEEP|-!!!-|<LCK>|
 //                   | OPT |_SYM_| SPC | | RET |<LCK>| CMD |
-  //  &none &bt BT_CLR &kp F6 &kp F5 &kp F4 &kp F10  &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_USB &out OUT_BLE &none        &none
-  //  &none &kp CAPS &kp F3   &kp F2 &kp F1 &kp F11  &kp K_MUTE   &kp C_VOL_UP &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &none
-  //  &none &trans &kp F9 &kp F8 &kp F7  &kp F12     &none        &none        &none        &mo DANGER   &to LCK      &none
-  //                        &trans &trans &trans &trans &to LCK &trans
                         bindings = <
-   &none &none &none &none &none &none     &kp F12 &kp F7 &kp F8 &kp F9 &none &none
-   &none &none &none &none &none &none     &kp F11 &kp F4 &kp F5 &kp F6 &none &none
-   &none &none &none &none &none &none     &kp F10 &kp F1 &kp F2 &kp F3 &none &none
-                     &none &none &none     &none   &none  &none
+   &none &none &none &none &none &none    &kp F12 &kp F7 &kp F8 &kp F9 &none &none
+   &none &none &none &none &none &none    &kp F11 &kp F4 &kp F5 &kp F6 &none &none
+   &none &none &none &none &none &none    &kp F10 &kp F1 &kp F2 &kp F3 &none &none
+                     &none &none &none    &none   &none  &none
                         >;
                 };
                 nav_layer {
 // ---------------------------------------------------------------------------
-// | CMD+`  |C_NEXT|C_BRI_DN|C_BRI_UP|C_NEXT| C_PP    | | Ctrl+Shift+TAB  | END | HOME |Ctrl+TAB| DEL  |     |
-// |C_VOL_UP| SHIFT| CTRL   | ALT    | CMD  | TAB     | | LFT             | DWN | UP   |RIGHT   | BSPC | CMD + |
-// |C_VOL_DN| undo |  cut   | copy   | paste|shift+TAB| | BACK |PG_DN|PG_UP| FWD |  PrScr   | CMD - |
-//                          |        |      |         | |  | |  |
+// | CMD+`  |C_NEXT|C_BRI_DN|C_BRI_UP|C_NEXT| C_PP    | |Ctrl+S+TAB| END | HOME |Ctrl+TAB| DEL  |       |
+// |C_VOL_UP| SHIFT| CTRL   | ALT    | CMD  | TAB     | | LFT      | DWN | UP   |RIGHT   | BSPC | CMD + |
+// |C_VOL_DN| undo |  cut   | copy   | paste|shift+TAB| | BACK     |PG_DN|PG_UP | FWD    |PrScr | CMD - |
+//                          |        |      |         | |          |     |      |
                         bindings = <
    &kp LG(GRAVE) &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT &kp C_PP       &kp LS(LC(TAB)) &kp END   &kp HOME  &kp LC(TAB)  &kp DEL        &trans
    &kp C_VOL_UP  &sk LSHIFT &sk LCTRL    &sk LALT     &sk LGUI   &kp TAB        &kp LEFT        &kp DOWN  &kp UP    &kp RIGHT    &kp BSPC       &kp LG(EQUAL)
    &kp C_VOL_DN  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)  &kp LS(TAB)    &kp LG(LPAR)    &kp PG_DN &kp PG_UP &kp LG(RPAR) &kp LG(LS(N4)) &kp LG(MINUS)
-                                         &trans       &trans      &trans         &trans &trans &trans
+                                         &trans       &trans     &trans         &trans &trans &trans
                         >;
                 };
         };
