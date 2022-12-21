@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <185>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -40,18 +40,18 @@
 
                 colemak_layer {
 // ---------------------------------------------------------------------------
-// | ESC   |  Q  |  W  |  F  |  P       |  B      | |  J  |  L      |  U  |  Y  |  '  |BSPC |
-// | TAB   |  A  |  R  |  S  |  T       |  G      | |  M  |  N      |  E  |  I  |  O  |  /  |
-// | SHIFT |  Z  |  X  |  C  |  D       |  V      | |  K  |  H      |  ,  |  ;  |  .  |SHIFT|
-//                     | CTRL|BSPC -NAV-|RET -NUM-| |SPACE|TAB -SYM-|SHIFT|
+// | ESC   |  Q  |  W  |  F  |  P       |  B      | |  J      |  L  |  U  |  Y  |  '  |BSPC |
+// | TAB   |  A  |  R  |  S  |  T       |  G      | |  M      |  N  |  E  |  I  |  O  |  /  |
+// | SHIFT |  Z  |  X  |  C  |  D       |  V      | |  K      |  H  |  ,  |  ;  |  .  |SHIFT|
+//                     | CTRL|BSPC -NAV-|RET -NUM-| |TAB -SYM-|SPACE| CMD |
 // unsure if &mt or &lt is correct behavior-wise
 //                         &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
 //                         &sk LCTRL &mt NAV BSPC &mt NUM RET    &kp SPACE &mt SYM TAB &sk LSHFT
                         bindings = <
-   &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)   AS(U)     AS(Y)    AS(SQT) &kp BSPC
-   &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)   AS(E)     AS(I)    AS(O)   AS(SLASH)
-   &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)   AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
-                         &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
+   &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)       AS(U)     AS(Y)    AS(SQT) &kp BSPC
+   &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)       AS(E)     AS(I)    AS(O)   AS(SLASH)
+   &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)       AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
+                         &sk LCTRL &lt NAV BSPC &lt NUM RET     &lt SYM TAB &kp SPACE &sk LGUI
                         >;
                 };
                 symbol_layer {
@@ -97,14 +97,14 @@
                 };
                 nav_layer {
 // ---------------------------------------------------------------------------
-// | CMD+`  |C_NEXT|C_BRI_DN|C_BRI_UP|C_NEXT| C_PP    | |Ctrl+S+TAB| END | HOME |Ctrl+TAB| DEL  |       |
-// |C_VOL_UP| SHIFT| CTRL   | ALT    | CMD  | TAB     | | LFT      | DWN | UP   |RIGHT   | BSPC | CMD + |
-// |C_VOL_DN| undo |  cut   | copy   | paste|shift+TAB| | BACK     |PG_DN|PG_UP | FWD    |PrScr | CMD - |
-//                          |        |      |         | |          |     |      |
+// | CMD+`  |C_NEXT|C_BRI_DN|C_BRI_UP|C_NEXT| C_PP    | |redo  | undo |paste|copy | cut | DEL |
+// |C_VOL_UP| SHIFT| CTRL   | ALT    | CMD  | TAB     | |CMD + | LFT  | DWN | UP  |RIGHT|divvy|
+// |C_VOL_DN| undo |  cut   | copy   | paste|shift+TAB| |CMD - | BACK |PG_DN|PG_UP| FWD |PrScr|
+//                          |        |      |         | |      |      |     |
                         bindings = <
-   &kp LG(GRAVE) &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT &kp C_PP       &kp LS(LC(TAB)) &kp END   &kp HOME  &kp LC(TAB)  &kp DEL        &trans
-   &kp C_VOL_UP  &sk LSHIFT &sk LCTRL    &sk LALT     &sk LGUI   &kp TAB        &kp LEFT        &kp DOWN  &kp UP    &kp RIGHT    &kp BSPC       &kp LG(EQUAL)
-   &kp C_VOL_DN  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)  &kp LS(TAB)    &kp LG(LPAR)    &kp PG_DN &kp PG_UP &kp LG(RPAR) &kp LG(LS(N4)) &kp LG(MINUS)
+   &kp LG(GRAVE) &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT &kp C_PP       &kp LG(LS(Z)) &kp LG(Z)    &kp LG(V) &kp LG(C) &kp LG(X)    &kp DEL
+   &kp C_VOL_UP  &sk LSHIFT &sk LCTRL    &sk LALT     &sk LGUI   &kp TAB        &kp LG(EQUAL) &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT    &kp F4
+   &kp C_VOL_DN  &kp LG(Z)  &kp LG(X)    &kp LG(C)    &kp LG(V)  &kp LS(TAB)    &kp LG(MINUS) &kp LG(LPAR) &kp PG_DN &kp PG_UP &kp LG(RPAR) &kp LG(LS(N4))
                                          &trans       &trans     &trans         &trans &trans &trans
                         >;
                 };
