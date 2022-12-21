@@ -44,15 +44,12 @@
 // | ESC   |  Q  |  W  |  F  |  P       |  B      | |  J      |  L  |  U  |  Y  |  '  |BSPC |
 // | TAB   |  A  |  R  |  S  |  T       |  G      | |  M      |  N  |  E  |  I  |  O  |  /  |
 // | SHIFT |  Z  |  X  |  C  |  D       |  V      | |  K      |  H  |  ,  |  ;  |  .  |SHIFT|
-//                     | CTRL|BSPC -NAV-|RET -NUM-| |TAB -SYM-|SPACE| CMD |
-// unsure if &mt or &lt is correct behavior-wise
-//                         &sk LCTRL &lt NAV BSPC &lt NUM RET    &kp SPACE &lt SYM TAB &sk LSHFT
-//                         &sk LCTRL &mt NAV BSPC &mt NUM RET    &kp SPACE &mt SYM TAB &sk LSHFT
+//                     | CTRL|BSPC -NAV-|TAB -NUM-| |RET -SYM-|SPACE| CMD |
                         bindings = <
    &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)       AS(U)     AS(Y)    AS(SQT) &kp BSPC
    &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)       AS(E)     AS(I)    AS(O)   AS(SLASH)
    &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)       AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
-                         &sk LCTRL &lt NAV BSPC &lt NUM RET     &lt SYM TAB &kp SPACE &sk LGUI
+                         &sk LCTRL &lt NAV BSPC &lt NUM TAB     &lt SYM RET &kp SPACE &sk LGUI
                         >;
                 };
                 symbol_layer {
