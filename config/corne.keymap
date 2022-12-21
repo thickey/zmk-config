@@ -39,6 +39,7 @@
                 compatible = "zmk,keymap";
 
                 colemak_layer {
+                  label = "BASE";
 // ---------------------------------------------------------------------------
 // | ESC   |  Q  |  W  |  F  |  P       |  B      | |  J      |  L  |  U  |  Y  |  '  |BSPC |
 // | TAB   |  A  |  R  |  S  |  T       |  G      | |  M      |  N  |  E  |  I  |  O  |  /  |
@@ -55,6 +56,7 @@
                         >;
                 };
                 symbol_layer {
+                  label = "SYM";
 // ---------------------------------------------------------------------------
 // |     |  *  |  +  |  #  |  {  |  }  | |  ^  |  @  |  $  |  \  |  `  |     |
 // |     |  :  |  -  |  "  |  (  |  )  | |  _  | CMD | ALT | CTRL|SHIFT|  ?  |
@@ -68,6 +70,7 @@
                         >;
                 };
                 number_layer {
+                  label = "NUM";
 // ---------------------------------------------------------------------------
 // |     |  B  |  1   |  UP  |  2  |  3  | |CLEAR|  7  |  8  |  9  |  +  |  *  |
 // |     |  D  | LEFT | DOWN |RIGHT|  4  | |  =  |  4  |  5  |  6  |  -  |  /  |
@@ -83,6 +86,7 @@
                         >;
                 };
                 fun_layer {
+                  label = "FN";
 // ---------------------------------------------------------------------------
 // |     |     | F 6 | F 5 | F 4 | F10 | | BT0 | BT1 | USB | BLE |     |     |
 // |     |CAPSL| F 3 | F 2 | F 1 | F11 | |VMUTE|VOLDN|VOLUP|BRIDN|BRIUP|     |
@@ -96,6 +100,7 @@
                         >;
                 };
                 nav_layer {
+                  label = "NAV";
 // ---------------------------------------------------------------------------
 // | CMD+`  |C_NEXT|C_BRI_DN|C_BRI_UP|C_NEXT| C_PP    | |redo  | undo |paste|copy | cut | DEL |
 // |C_VOL_UP| SHIFT| CTRL   | ALT    | CMD  | TAB     | |CMD + | LFT  | DWN | UP  |RIGHT|divvy|
