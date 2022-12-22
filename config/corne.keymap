@@ -104,9 +104,9 @@
 // |C_VOL_DN| undo |  cut   | copy   | paste|shift+TAB| |CMD - | BACK |PG_DN|PG_UP| FWD |PrScr|
 //                          |        |      |         | |      |      |     |
                         bindings = <
-   &kp LG(GRAVE) &kp C_BRI_DN &kp C_BRI_UP &kp C_PREV &kp C_PP  &kp C_NEXT     &kp LG(LS(Z)) &kp LG(Z)    &kp LG(V) &kp LG(C) &kp LG(X)    &kp DEL
-   &kp C_VOL_UP  &sk LSHIFT   &sk LCTRL    &sk LALT   &sk LGUI  &kp TAB        &kp LG(EQUAL) &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT    &kp F4
-   &kp C_VOL_DN  &kp LG(Z)    &kp LG(X)    &kp LG(C)  &kp LG(V) &kp LS(TAB)    &kp LG(MINUS) &kp LG(LPAR) &kp PG_DN &kp PG_UP &kp LG(RPAR) &kp LG(LS(N4))
+   &kp LG(GRAVE) &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_PP  &kp C_NEXT     &kp LG(LS(Z)) &kp LG(Z)    &kp LG(V) &kp LG(C) &kp LG(X)    &kp DEL
+   &kp C_BRI_UP  &sk LSHIFT   &sk LCTRL    &sk LALT   &sk LGUI  &kp TAB        &kp LG(EQUAL) &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT    &kp F4
+   &kp C_BRI_DN  &kp LG(Z)    &kp LG(X)    &kp LG(C)  &kp LG(V) &kp LS(TAB)    &kp LG(MINUS) &kp LG(LPAR) &kp PG_DN &kp PG_UP &kp LG(RPAR) &kp LG(LS(N4))
                                            &trans     &trans    &trans         &trans &trans &trans
                         >;
                 };
