@@ -49,7 +49,7 @@
    &kp ESC   AS(Q) AS(W) AS(F)     AS(P)   AS(B)      AS(J)     AS(L)       AS(U)     AS(Y)    AS(SQT) &kp BSPC
    &kp TAB   AS(A) AS(R) AS(S)     AS(T)   AS(G)      AS(M)     AS(N)       AS(E)     AS(I)    AS(O)   AS(SLASH)
    &sk LSHFT AS(Z) AS(X) AS(C)     AS(D)   AS(V)      AS(K)     AS(H)       AS(COMMA) AS(SEMI) AS(DOT) &sk LSHFT
-                         &sk LGUI  &lt NAV BSPC &lt NUM TAB     &lt SYM RET &kp SPACE &sk LCTRL
+                         &kp LGUI  &lt NAV BSPC &lt NUM TAB     &lt SYM RET &kp SPACE &kp LCTRL
                         >;
                 };
                 symbol_layer {
