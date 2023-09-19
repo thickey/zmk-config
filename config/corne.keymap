@@ -77,7 +77,7 @@
 //                         &trans   &sk CAPS  &trans     &trans    &trans &trans
                         bindings = <
    &trans   &kp B &kp N1   &kp UP   &kp N2    &kp N3    &kp CLEAR &kp N7 &kp N8 &kp N9 &kp PLUS  &kp STAR
-   &to BASE &kp D &kp LEFT &kp DOWN &kp RIGHT &kp N4    &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS &kp SLASH
+   &tog NUM &kp D &kp LEFT &kp DOWN &kp RIGHT &kp N4    &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS &kp SLASH
    &tog NUM &kp Q &kp W    &kp E    &kp R     &kp F     &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &kp RET
                          &mo FUN  &trans    &trans    &trans    &trans &trans
                         >;
